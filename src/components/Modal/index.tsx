@@ -13,6 +13,9 @@ export default function Modal() {
     if (playerPoint > 21) {
       setResult(-1);
     }
+    if (playerPoint === 21) {
+      setResult(1);
+    }
   }, [playerCards.length, playerCards, setResult]);
 
   if (result === 0) return null;
